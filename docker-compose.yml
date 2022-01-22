@@ -8,6 +8,15 @@ services:
       - ./conf/nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./src:/app
   php:
-    image: php:fpm
+    build: .
     volumes:
       - ./src:/app
+  mysql:
+    image: mysql:latest
+    volumes:
+      - ./db_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=asdfasdf
+      - MYSQL_USER=tutoring
+      - MYSQL_PASSWORD=garnichts
+      - MYSQL_DATABASE=tutoring
