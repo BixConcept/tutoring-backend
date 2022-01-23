@@ -33,7 +33,7 @@ Only for testing purposes, since there is a database server set up at school. We
 to import it, run something like this:
 
 ```
-cat init.sql > docker exec tutoring-backend-mysql-1 mysql -u tutoring -p garnichts
+$ cat init.sql > docker exec tutoring-backend-mysql-1 mysql -u tutoring -p garnichts
 ```
 
 (untested)
