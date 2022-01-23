@@ -14,7 +14,7 @@ services:
     volumes:
       - ./src:/app
   mysql:
-    image: mysql:latest
+    image: mariadb:latest # not technically mysql, but it should work on arm
     restart: always
     volumes:
       - ./db_data:/var/lib/mysql
