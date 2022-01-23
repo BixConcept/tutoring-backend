@@ -23,3 +23,17 @@ Start the desktop app, it will start a docker daemon after you entered your pass
 ### Windows
 
 TODO
+
+## initialize tables
+
+Only for testing purposes, since there is a database server set up at school. We use roughly this schema:
+
+![a database schema](https://i.imgur.com/jPXPxAk.jpg)
+
+to import it, run something like this:
+
+```
+cat init.sql > docker exec tutoring-backend-mysql-1 mysql -u tutoring -p garnichts
+```
+
+(untested)
