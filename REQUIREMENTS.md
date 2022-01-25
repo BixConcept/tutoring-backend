@@ -18,7 +18,7 @@ Returns a list of all subjects in human-readable form.
 ```
 
 
-## `GET /offers`
+## `GET /offers?subject=asdf&grade=8`
 
 Returns a list of offers matching criteria like subject and grade
 
