@@ -26,7 +26,7 @@ class User {
             u.id,
             u.first_name,
             u.last_name,
-            u.grade,
+            u.grade AS user_grade,
             u.email,
             u.phone,
             u.misc,
@@ -43,5 +43,10 @@ class User {
             subject AS s ON t.subject_id = s.id
         ORDER BY
             u.updated_at DESC;";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        return $stmt;
     }
 }
